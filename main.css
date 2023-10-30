@@ -1,1 +1,55 @@
+*{
+    background-color: #dad2e9;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    line-height: 5%;
+}
+table, tr, td {
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #ffffff;
+}
 
+td {
+    width: 100px;
+    height: 70px;
+
+}
+
+#solution{
+    justify-content: flex-start;
+}
+.border {
+    border: var(--border) solid black;
+  }
+  
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .box {
+    width: var(--width);
+    height: var(--height);
+  }
+  
+  .bottom-outline {
+    width: var(--width);
+    height: var(--outline);
+    border-top-width: 0px !important;
+    transform: skew(var(--skew-angle)) translateX(var(--translate));
+  }
+  
+  /* height would be implicitly same as box */
+  .right-outline {
+    width: var(--outline);
+    border-left-width: 0 !important;
+    border-bottom-width: 0 !important;
+    transform: skew(0deg, var(--skew-angle)) translateY(var(--translate));
+  }
