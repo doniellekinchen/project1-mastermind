@@ -1,63 +1,28 @@
 console.log('js:loaded')
-//define secret code
-const secretCode = generateSecretCode();
-let numGuesses = 0
 
-//generate secret random code
-function generateSecretCode (){
+// Generate secret random code
+function generateSecretCode() {
     const potions = ['purple', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red'];
     const code = [];
-    for (let i = 0; i<4; i++) {
+    for (let i = 0; i < 4; i++) {
         const randomIndex = Math.floor(Math.random() * potions.length);
         code.push(potions[randomIndex]);
     }
     return code;
 }
+const btnSelector = document.querySelectorAll('.visible')
 
 
-function submitPurple() {
-    const guessInput = document.getElementById('guessInput');
-    const guess = guessInput.value.toUpperCase();
-}
-function submitIndigo() {
-    const guessInput = document.getElementById('guessInput');
-    const guess = guessInput.value.toUpperCase();
-}
+console.log(btnSelector)
 
-function submitBlue() {
-    const guessInput = document.getElementById('guessInput');
-    const guess = guessInput.value.toUpperCase();
-}
+btnSelector.forEach(btn =>{
+    const potions = btn.classList[1];
+    console.log(potions);
+    
+    btn.addEventListener("click", () => selectPotions())
+    
+}) 
 
-function submitGreen() {
-    const guessInput = document.getElementById('guessInput');
-    const guess = guessInput.value.toUpperCase();
+function selectPotions(){
+    console.log("FINALLY!");
 }
-function submitYellow() {
-    const guessInput = document.getElementById('guessInput');
-    const guess = guessInput.value.toUpperCase();
-}
-
-function submitOrange() {
-    const guessInput = document.getElementById('guessInput');
-    const guess = guessInput.value.toUpperCase();
-}
-
-function submitRed() {
-    const guessInput = document.getElementById('guessInput');
-    const guess = guessInput.value.toUpperCase();
-}
-
-function resetGame() {
-    const guessInput = document.getElementById('guessSubmit')
-    const submit = guessSubmit.value.toUpperCase();
-}
-function checkGuess() {
-    const guessInput = document.getElementById('guessSubmit')
-    const submit = guessSubmit.value.toUpperCase();
-}
-
-if (checkGuess.join('') === secretCode.join('')) {
-
-}
-

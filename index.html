@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -68,24 +68,24 @@
             </table>
         </div>
 
-        <div class="tableside">
+        
             <table class="potions">
                 <input type="button" id="guessInput" maxlength="4">
                 <tr>
-                    <td><button onclick="submitPurple()"><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/purple.png"></button></td>
-                    <td><button onclick="submitIndigo()"><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/dark purple.png"></button></td>
-                    <td><button onclick="submitBlue()"><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/blue.png"></button></td>
-                    <td><button onclick="submitGreen()"><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/green.png"></button></td>
-                    <td><button onclick="submitYellow()"><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/yellow.png"></button></td>
-                    <td><button onclick="submitOrange()"><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/orange.png"></button></td>
-                    <td><button onclick="submitRed()"><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/red.png"></button></td>
+                    <td><button><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/purple.png"></button></td>
+                    <td><button><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/dark purple.png"></button></td>
+                    <td><button><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/blue.png"></button></td>
+                    <td><button><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/green.png"></button></td>
+                    <td><button><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/yellow.png"></button></td>
+                    <td><button><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/orange.png"></button></td>
+                    <td><button><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/red.png"></button></td>
                 </tr>
             </table>
-        </div> 
+        
 
         <input type="button" id="guessSubmit" maxlength="2">
-       <center><button onclick="resetGame()">Reset</button>
-       <button onclick="checkGuess()">Submit</button></center>
+       <button onclick="resetGame()">Reset</button>
+       <button onclick="checkGuess()">Submit</button>
 
 </body>
 </html>
