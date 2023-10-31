@@ -14,45 +14,45 @@
 
             <table class="maintable">
                 <tr id="guess1">
-                   <td>...</td>
-                   <td>...</td>
-                   <td>...</td>
-                   <td>...</td> 
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td> 
                    <td id="hint1">...</td>
                 </tr>
                 <tr id="guess2">
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td id="hint2">...</td>
                  </tr>
                  <tr id="guess3">
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td> 
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> 
                     <td id="hint3">...</td>
                  </tr>
                  <tr id="guess4">
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td> 
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> 
                     <td id="hint4">...</td>
                  </tr>
                  <tr id="guess5">
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td> 
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> 
                     <td id="hint5">...</td>
                  </tr>
                  <tr id="guess6">
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td id="hint6">...</td>
                  </tr>
             </table>
@@ -70,20 +70,22 @@
 
         <div class="tableside">
             <table class="potions">
+                <input type="button" id="guessInput" maxlength="4">
                 <tr>
-                    <td><button><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/purple.png"></button></td>
-                    <td><button><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/dark purple.png"></button></td>
-                    <td><button><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/blue.png"></button></td>
-                    <td><button><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/green.png"></button></td>
-                    <td><button><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/yellow.png"></button></td>
-                    <td><button><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/orange.png"></button></td>
-                    <td><button><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/red.png"></button></td>
+                    <td><button onclick="submitPurple()"><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/purple.png"></button></td>
+                    <td><button onclick="submitIndigo()"><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/dark purple.png"></button></td>
+                    <td><button onclick="submitBlue()"><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/blue.png"></button></td>
+                    <td><button onclick="submitGreen()"><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/green.png"></button></td>
+                    <td><button onclick="submitYellow()"><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/yellow.png"></button></td>
+                    <td><button onclick="submitOrange()"><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/orange.png"></button></td>
+                    <td><button onclick="submitRed()"><input class="visible" type="image" style="height:50px; width:50px;" src="images.jpg/red.png"></button></td>
                 </tr>
             </table>
         </div> 
 
-       <center><button>Reset</button>
-       <button>Submit</button></center>
+        <input type="button" id="guessSubmit" maxlength="2">
+       <center><button onclick="resetGame()">Reset</button>
+       <button onclick="checkGuess()">Submit</button></center>
 
 </body>
 </html>
