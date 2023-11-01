@@ -1,7 +1,7 @@
 console.log('js:loaded')
 
 // Generate secret random code
-const code = [];
+let code = [];
 function generateSecretCode() {
     const potions = ['purple', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red'];
     for (let i = 0; i < 4; i++) {
@@ -35,7 +35,7 @@ generateSecretCode()
 
 function selectPotions(e){
     console.log("FINALLY!", e.target.id);
-    console.log(maintable.rows[turnNumber].cells[guessNumber])
+    console.log(maintable.rows[turnNumber].cells[guessNumber]) //grab and change style.bkg property
     let currentGuess = e.target.id
     guessArray.push(currentGuess)
     guessNumber++
@@ -44,10 +44,12 @@ function selectPotions(e){
         guessArray = []
         guessNumber = 0
     }
-}
-
-function checkGuess(){
-        console.log(code)
+    let maintable = document.querySelectorAll(".maintable").style.color = "blue"
+} 
+    
+    
+    function checkGuess(){
+        console.log('code', code)
         console.log(guessArray)
         if (JSON.stringify(code) ===  JSON.stringify(guessArray)) {
             console.log('correct!!')
@@ -59,9 +61,22 @@ function checkGuess(){
             }
         }
     }
-// function gameOver(){
-//     document.getElementById("game-over-message").style.display = "block";
-// }
+
+//reset button
+function resetGame() {
+    guessArray = [];
+    guessNumber = 0;
+    turnNumber = 0;
+    code = []
+    generateSecretCode(); // Regenerate the secret code
+    console.log('start over')
+    console.log(guessNumber)
+}
+document.getElementById("reset").onclick = function() {
+    resetGame();
+};
+
+
+
+
 //if turnNumber = 6, then game over
-
-
