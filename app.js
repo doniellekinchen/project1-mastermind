@@ -36,9 +36,9 @@ btnSelector.forEach(btn =>{
 generateSecretCode()
 
 
-//main function of the game
+//the function for the each button to be selected and input into maintable
 
-function selectPotions(e){ //the function for the each button to be selected and input into maintable
+function selectPotions(e){ 
     console.log("FINALLY!", e.target.id);
     maintable.rows[turnNumber].cells[guessNumber].style.background = e.target.id // targets each cell in the maintable 
     console.log(maintable.rows[turnNumber].cells[guessNumber]) 
@@ -59,7 +59,6 @@ function setCellColor(cell, color){
     cell.style.backgroundColor = color;
 }
 
-
 //shows the solution before and after 6 tries
 
 function showSolution(){ 
@@ -68,6 +67,8 @@ function showSolution(){
         setCellColor(solutionRow.cells[i], code[i]);
     }
 }
+
+//main function of the game
 
 let paragraph = document.getElementById("madscitalk"); //globally scoped
 
