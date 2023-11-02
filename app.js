@@ -38,7 +38,7 @@ generateSecretCode()
 
 //main function of the game
 
-function selectPotions(e){
+function selectPotions(e){ //the function for the each button to be selected and input into maintable
     console.log("FINALLY!", e.target.id);
     maintable.rows[turnNumber].cells[guessNumber].style.background = e.target.id // targets each cell in the maintable 
     console.log(maintable.rows[turnNumber].cells[guessNumber]) 
@@ -62,7 +62,7 @@ function setCellColor(cell, color){
 
 //shows the solution before and after 6 tries
 
-function showSolution(){
+function showSolution(){ 
     const solutionRow = document.getElementById("solution1");
     for (let i = 0; i < code.length; i++) {
         setCellColor(solutionRow.cells[i], code[i]);
@@ -74,17 +74,17 @@ let paragraph = document.getElementById("madscitalk"); //globally scoped
     function checkGuess(){
         console.log('code', code)
         console.log(guessArray)
-        if (JSON.stringify(code) ===  JSON.stringify(guessArray)) {
-            document.getElementById(`hint${number}`).style.backgroundColor = "green"
+        if (JSON.stringify(code) ===  JSON.stringify(guessArray)) { //compares the two arrays
+            document.getElementById(`hint${number}`).style.backgroundColor = "green" // shows the red/green hint in the 5th column
             showSolution();
             paragraph.innerHTML = "YOU GOT IT CORRECT! UGH! Take your potion and go!";
-        } else if (JSON.stringify(code) !== JSON.stringify(guessArray)) {
-            document.getElementById(`hint${number}`).style.backgroundColor = "red"
-            number++ // shows the red/green hint in the 5th column
+        } else if (JSON.stringify(code) !== JSON.stringify(guessArray)) { //compares the two arrays
+            document.getElementById(`hint${number}`).style.backgroundColor = "red" // shows the red/green hint in the 5th column
+            number++ 
             turnNumber++;
             paragraph.innerHTML = "HAHA! Something is wrong!"
-            if (turnNumber === 6){
-                showSolution(); 
+            if (turnNumber === 6){ //if you use all 6 tries...
+                showSolution(); // the solution shows here
                 paragraph.innerHTML = "HAHA! GAME OVER! Reset the game to try again!"
             }
         }
