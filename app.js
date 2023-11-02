@@ -1,6 +1,6 @@
 console.log('js:loaded')
 
-// Generate secret random code
+// Mad scientist's code
 let code = [];
 function generateSecretCode() {
     const potions = ['purple', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red'];
@@ -12,6 +12,8 @@ function generateSecretCode() {
     potions.push(...code);
     return code;
 }
+
+//button clicker for each box to go into maintable
 
 const btnSelector = document.querySelectorAll('.visible');
 const maintable = document.querySelector('.maintable');
@@ -33,15 +35,15 @@ btnSelector.forEach(btn =>{
 
 generateSecretCode()
 
-//button clicker for each box
 
+//main function of the game
 
 function selectPotions(e){
     console.log("FINALLY!", e.target.id);
     maintable.rows[turnNumber].cells[guessNumber].style.background = e.target.id // targets each cell in the maintable 
-    console.log(maintable.rows[turnNumber].cells[guessNumber]) //grab and change style.bkg property
+    console.log(maintable.rows[turnNumber].cells[guessNumber]) 
     let currentGuess = e.target.id
-    guessArray.push(currentGuess)
+    guessArray.push(currentGuess) 
     guessNumber++
     if (guessNumber === 4){
         checkGuess()
@@ -66,7 +68,6 @@ function showSolution(){
         setCellColor(solutionRow.cells[i], code[i]);
     }
 }
-//main function of the game
 
 let paragraph = document.getElementById("madscitalk"); //globally scoped
 
@@ -81,10 +82,10 @@ let paragraph = document.getElementById("madscitalk"); //globally scoped
             document.getElementById(`hint${number}`).style.backgroundColor = "red"
             number++ // shows the red/green hint in the 5th column
             turnNumber++;
-            paragraph.innerHTML = "HAHA! something is wrong!"
+            paragraph.innerHTML = "HAHA! Something is wrong!"
             if (turnNumber === 6){
                 showSolution(); 
-                paragraph.innerHTML = "HAHA! GAME OVER! Rest the game to try again!"
+                paragraph.innerHTML = "HAHA! GAME OVER! Reset the game to try again!"
             }
         }
         
