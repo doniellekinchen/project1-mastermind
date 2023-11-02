@@ -24,20 +24,13 @@ Using the 7 chakra colors:
 
 # How to play
 
-# Basic how to play (not extensive): 
+## Basic how to play (not extensive): 
 
-You are creating a potion to give yourself superpowers but you have to guess which potion combo is correct. There are 7 different potions that give different powers. You have 6 times to get it correct, if you get all 6 wrong, the lab will blow!
+You are creating a potion to give yourself superpowers but you have to guess which potion combo is correct. There are 7 different potions that give different powers. You have 6 times to get it correct. If you get all 6 wrong, then it's game over, and the mad scientist gets to keep your potion secrets! If you get the combination correct within the 6 tries, you get to keep the potion, but the mad scientist is NOT happy!
 
-On the right side, there are 4 indicators to let you know if your combination is correct, incorrect or misplaced. 
+Keep in mind, the mad scientist will not use the same color twice! He will also tell you if
 
-if your combination has a misplaced position, the indicator will light yellow for the specific position. This means the potion color is correct, but not in the correct spot.
-
-If your combination has one potion color in the correct space, the indicator will light green for the specific condition.
-
-If your combination has one or more potion color that is not used by the computer, the indicator will light grey.
-
-## Win/Lose Condition
-If the user guesses within the 6 tries, they get to keep the potions and the mad scientist is angrier! But, if the user runs out of guesses, then they don't get to keep the potions and the mad scientist is happy!
+On the right side (col 5), each box for each row will show red if it's incorrect, or green if it's correct! 
 
 p.s. this game is similar to wordle, you are trying to guess what code combination the computer has in their mind, but it will help you along the way!
 		
