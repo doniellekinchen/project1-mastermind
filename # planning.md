@@ -1,5 +1,7 @@
 # planning.md
 
+![Alt text](images.jpg/p1-wireframe.jpg)
+
 # Pseudocode
 
 ## If/Then Conditional Statements

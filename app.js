@@ -35,7 +35,7 @@ generateSecretCode()
 
 //button clicker for each box
 
-let paragraph = document.getElementById("madscitalk"); //globally scoped
+
 function selectPotions(e){
     console.log("FINALLY!", e.target.id);
     maintable.rows[turnNumber].cells[guessNumber].style.background = e.target.id // targets each cell in the maintable 
@@ -48,24 +48,27 @@ function selectPotions(e){
         guessArray = []
         guessNumber = 0
     }
+    
 } 
 
-    let number = 1; //globally scoped for checkGuess
+let number = 1; //globally scoped for checkGuess
 
-    function setCellColor(cell, color){
-        cell.style.backgroundColor = color;
-    }
+function setCellColor(cell, color){
+    cell.style.backgroundColor = color;
+}
 
 
-    //shows the solution before and after 6 tries
+//shows the solution before and after 6 tries
 
-    function showSolution(){
+function showSolution(){
     const solutionRow = document.getElementById("solution1");
     for (let i = 0; i < code.length; i++) {
         setCellColor(solutionRow.cells[i], code[i]);
     }
 }
-    //main function of the game
+//main function of the game
+
+let paragraph = document.getElementById("madscitalk"); //globally scoped
 
     function checkGuess(){
         console.log('code', code)

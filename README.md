@@ -6,8 +6,6 @@ Power, Potions & Destruction — oh my! (Mastermind)
 
 Creating the perfect potion to give yourself the ultimate superpowers, but only at the recommendation of the mad scientist!
 
-![Alt text](images.jpg/p1-wireframe.jpg)
-
 # Code Graphic Options
 
 Using the 7 chakra colors:
