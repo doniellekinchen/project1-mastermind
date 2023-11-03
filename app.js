@@ -77,8 +77,8 @@ let paragraph = document.getElementById("madscitalk"); //globally scoped
         console.log(guessArray)
         if (JSON.stringify(code) ===  JSON.stringify(guessArray)) { //compares the two arrays
             document.getElementById(`hint${number}`).style.backgroundColor = "green" // shows the red/green hint in the 5th column
-            showSolution();
-            paragraph.innerHTML = "YOU GOT IT CORRECT! UGH! Take your potion and go!";
+            showSolution(); // if you guess before the 6 tries, the solution shows here
+            paragraph.innerHTML = "YOU GOT IT CORRECT! UGH! Take your potion and go! Reset the game to play again!";
         } else if (JSON.stringify(code) !== JSON.stringify(guessArray)) { //compares the two arrays
             document.getElementById(`hint${number}`).style.backgroundColor = "red" // shows the red/green hint in the 5th column
             number++ 

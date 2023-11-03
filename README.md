@@ -2,15 +2,14 @@
 
 # Title/Theme
 
-Power, Potions & Destruction — oh my! (Mastermind)
+Power, Potions & Destruction! — oh my! (Mastermind)
 
 Creating the perfect potion to give yourself the ultimate superpowers, but only at the recommendation of the mad scientist! Guess what the mad scientist recommendation is and you get to keep the potion!
 
 # Code Graphic Options
 
-Using the 7 chakra colors:
+Using the 7 chakra colors in the order that appears in the game:
 	
-	chakra colors:
 	purple - mind reading
 	indigo - psychic ability
 	blue - vocal reality manipulation
@@ -55,3 +54,7 @@ I hope to add the following features to my game:
 HTML
 CSS
 Javascript
+
+## Play here!
+
+https://doniellekinchen.github.io/project1-mastermind/
